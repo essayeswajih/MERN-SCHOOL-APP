@@ -1,0 +1,301 @@
+/* src/pages/style.css */
+
+/* Conteneur principal */
+.gerer-eleve-container {
+    flex-grow: 1;
+    width: calc(100% - 230px);
+    margin-left: 230px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+  
+  /* En-tête avec dégradé */
+  .header-container {
+    width: 100%;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 8px 32px rgba(148, 163, 184, 0.1);
+    border-radius: 0 0 20px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 600px) {
+    .header-container {
+      padding: 16px;
+    }
+  }
+  
+  /* Titre */
+  .header-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1e293b;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  
+  @media (max-width: 600px) {
+    .header-title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .header-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 600px;
+  }
+  
+  /* Bouton Nouvel Élève */
+  .new-student-button {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+    text-transform: none;
+    font-size: 0.9rem;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .new-student-button:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .new-student-button:active {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 600px) {
+    .new-student-button {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Champ de recherche */
+  .search-field {
+    width: 380px;
+  }
+  
+  .search-field .MuiOutlinedInput-root {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.1);
+  }
+  
+  .search-field .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(148, 163, 184, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .search-field .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #6366f1;
+  }
+  
+  .search-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  }
+  
+  .search-field .MuiInputBase-input {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    font-family: "Inter", sans-serif;
+  }
+  
+  @media (max-width: 600px) {
+    .search-field {
+      width: 100%;
+    }
+    .search-field .MuiInputBase-input {
+      padding: 10px 12px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Selecteur de filtre */
+  .filter-select {
+    min-width: 120px;
+  }
+  
+  .filter-select .MuiOutlinedInput-root {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.1);
+  }
+  
+  .filter-select .MuiSelect-select {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    font-family: "Inter", sans-serif;
+  }
+  
+  @media (max-width: 600px) {
+    .filter-select {
+      min-width: 100px;
+    }
+    .filter-select .MuiSelect-select {
+      padding: 10px 12px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Conteneur des statistiques */
+  .stats-container {
+    padding: 24px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  @media (max-width: 600px) {
+    .stats-container {
+      padding: 16px;
+    }
+  }
+  
+  /* Carte de statistique */
+  .stats-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .stats-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: rgba(99, 102, 241, 0.1);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  }
+  
+  .stats-icon svg {
+    color: #6366f1;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 600px) {
+    .stats-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .stats-icon svg {
+      font-size: 20px;
+    }
+  }
+  
+  .stats-text h6 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #1e293b;
+  }
+  
+  .stats-text p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  @media (max-width: 600px) {
+    .stats-text h6 {
+      font-size: 1.1rem;
+    }
+    .stats-text p {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Boutons d'action (Exporter, Imprimer, Filtrer) */
+  .action-button {
+    border-color: rgba(99, 102, 241, 0.3);
+    color: #6366f1;
+    border-radius: 12px;
+    text-transform: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    box-shadow: 0 4px 12px rgba(148, 163, 184, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .action-button:hover {
+    border-color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.04);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.2);
+  }
+  
+  @media (max-width: 600px) {
+    .action-button {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Conteneur du tableau */
+  .table-container {
+    padding: 0 40px;
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .table-container {
+      padding: 0 10px;
+    }
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+  }
+  
+  .pagination .MuiPaginationItem-root {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin: 0 4px;
+    border-radius: 12px;
+    color: #475569;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .pagination .MuiPaginationItem-root:hover {
+    background-color: rgba(99, 102, 241, 0.08);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  }
+  
+  .pagination .MuiPaginationItem-root.Mui-selected {
+    background-color: #6366f1;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+  }
+  
+  .pagination .MuiPaginationItem-root.Mui-selected:hover {
+    background-color: #4f46e5;
+  }
